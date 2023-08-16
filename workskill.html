@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Workskill Assessment</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Which of the following skills is typically associated with effective time management?</p>
+                <label><input type="radio" name="q1" value="a">a)  Creativity</label>
+                <label><input type="radio" name="q1" value="b">b) Multitasking</label>
+                <label><input type="radio" name="q1" value="c">c) Procrastination</label>
+                <label><input type="radio" name="q2" value="d">d)  Prioritization</label>
+                </div>
+                <div class="question">
+                <p>2.What does the acronym "CRM" stand for?</p>
+                <label><input type="radio" name="q2" value="a"> a) Customer Relations Manager</label>
+                <label><input type="radio" name="q2" value="b"> b) Customer Resource Management</label>
+                <label><input type="radio" name="q2" value="c"> c) Customer Relationship Management</label>
+                <label><input type="radio" name="q2" value="d"> d) Customer Revenue Management</label>
+                </div>
+                <div class="question">
+                <p>3.Which software is commonly used for creating spreadsheets and performing data analysis?</p>
+                <label><input type="radio" name="q3" value="a"> a) Photoshop</label>
+                <label><input type="radio" name="q3" value="b"> b)  Excel</label>
+                <label><input type="radio" name="q3" value="c"> c)  Word</label>
+                <label><input type="radio" name="q3" value="d"> d) PowerPoint</label>
+                </div>
+                <div class="question">
+                <p>4.What does the term "SEO" refer to?</p>
+                <label><input type="radio" name="q4" value="a">a) Social Engagement Optimization</label>
+                <label><input type="radio" name="q4" value="b">b) Search Engine Overhaul</label>
+                <label><input type="radio" name="q4" value="c">c)  Search Engine Optimization</label>
+                <label><input type="radio" name="q4" value="d">d) Site Engagement Optimization</label>
+            </div>
+            <div class="question">
+                <p>5. Which of the following is a key component of effective communication?</p>
+                <label><input type="radio" name="q5" value="a"> a) Talking only and not listening</label>
+                <label><input type="radio" name="q5" value="b">b) Using complex jargon</label>
+                <label><input type="radio" name="q5" value="c">c) Active listening</label>
+                <label><input type="radio" name="q5" value="d"> d) Avoiding eye contact</label>
+               
+            </div>
+            <div class="question">
+                <p>6.Which skill involves the ability to adapt and learn quickly in new situations?</p>
+                <label><input type="radio" name="q6" value="a"> a) Technical proficiency</label>
+                <label><input type="radio" name="q6" value="b">b)Leadership</label>
+                <label><input type="radio" name="q6" value="c">c) Flexibility</label>
+                <label><input type="radio" name="q6" value="d"> d) Attention to detail</label>
+               
+            </div>
+            <div class="question">
+                <p>7.What does "SWOT" stand for in the context of business analysis?</p>
+                <label><input type="radio" name="q6" value="a"> a) Superior Workforce and Operations Team</label>
+                <label><input type="radio" name="q6" value="b">b) Strengths, Weaknesses, Opportunities, Threats</label>
+                <label><input type="radio" name="q6" value="c">c) Successful Workflow and Organizational Tactics</label>
+                <label><input type="radio" name="q6" value="d"> d)  Strategic Work and Operational Tactics</label>
+               
+            </div>
+            <div class="question">
+                <p>8.In project management, what is the purpose of a Gantt chart?</p>
+                <label><input type="radio" name="q6" value="a"> a)Displaying sales data</label>
+                <label><input type="radio" name="q6" value="b">b)Tracking social media engagement</label>
+                <label><input type="radio" name="q6" value="c">c) Representing project timelines and tasks</label>
+                <label><input type="radio" name="q6" value="d"> d)Managing customer feedback</label>
+            </div>
+            <div class="navigation">
+                <button type="button" id="prev-btn">Previous</button>
+                <button type="button" id="next-btn">Next</button>
+            </div>
+
+            <button type="button" id="submit-btn">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <script src="skill.js"></script>
+    <script>
+        const form = document.getElementById("quiz-form");
+        const prevButton = document.getElementById("prev-btn");
+        const nextButton = document.getElementById("next-btn");
+        const questions = document.querySelectorAll(".question");
+        let currentQuestionIndex = 0;
+
+        function showQuestion(index) {
+            questions.forEach((question, i) => {
+                question.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        function navigate(direction) {
+            currentQuestionIndex += direction;
+            if (currentQuestionIndex < 0) {
+                currentQuestionIndex = 0;
+            }
+            if (currentQuestionIndex >= questions.length) {
+                currentQuestionIndex = questions.length - 1;
+            }
+            showQuestion(currentQuestionIndex);
+        }
+
+        prevButton.addEventListener("click", () => navigate(-1));
+        nextButton.addEventListener("click", () => navigate(1));
+
+        showQuestion(currentQuestionIndex);
+    </script>
+</body>
+</html>

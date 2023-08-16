@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English Proficiency Test</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>English Proficiency Quiz</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1. Choose the correct synonym for "happy."</p>
+                <label><input type="radio" name="q1" value="a">a) Sad</label>
+                <label><input type="radio" name="q1" value="b"> b)Joyful</label>
+                <label><input type="radio" name="q1" value="c"> c)Angry</label>
+                <label><input type="radio" name="q2" value="d"> d) Tired</label>
+                </div>
+                <div class="question">
+                <p>2. Which sentence is grammatically correct?</p>
+                <label><input type="radio" name="q2" value="a"> a) She don't like pizza.</label>
+                <label><input type="radio" name="q2" value="b"> b) He doesn't likes pizza.</label>
+                <label><input type="radio" name="q2" value="c"> c) They isn't hungry.r</label>
+                <label><input type="radio" name="q2" value="d"> d) I am studying for the test.</label>
+                </div>
+                <div class="question">
+                <p>3.Identify the correct form of the verb for the sentence: "She ____ to the store yesterday."</p>
+                <label><input type="radio" name="q3" value="a"> a) go</label>
+                <label><input type="radio" name="q3" value="b"> b) goes</label>
+                <label><input type="radio" name="q3" value="c"> c) went</label>
+                <label><input type="radio" name="q3" value="d"> d) gone</label>
+                </div>
+                <div class="question">
+                <p>4.Choose the appropriate word to complete the sentence: "I'm really _____ in learning to play the guitar."</p>
+                <label><input type="radio" name="q4" value="a">a) interest</label>
+                <label><input type="radio" name="q4" value="b">b) interesting</label>
+                <label><input type="radio" name="q4" value="c">c) interested</label>
+                <label><input type="radio" name="q4" value="d">d) interests</label>
+            </div>
+            <div class="question">
+                <p>5.Which sentence is an example of the past continuous tense?</p>
+                <label><input type="radio" name="q5" value="a"> a) I will go to the store tomorrow.</label>
+                <label><input type="radio" name="q5" value="b">b) She is reading a book right now.</label>
+                <label><input type="radio" name="q5" value="c">c) They have finished their homework.</label>
+                <label><input type="radio" name="q5" value="d"> d) He was studying when the phone rang.</label>
+               
+            </div>
+            <div class="question">
+                <p>6.Identify the correct order of the words to form a coherent sentence: "always / she / late / is / for / class."</p>
+                <label><input type="radio" name="q6" value="a"> a) Always she is late for class.</label>
+                <label><input type="radio" name="q6" value="b">b) She always late is for class.</label>
+                <label><input type="radio" name="q6" value="c">c) She is for class always late.</label>
+                <label><input type="radio" name="q6" value="d"> d) She is always late for class.</label>
+               
+            </div>
+          
+               
+            <div class="navigation">
+                <button type="button" id="prev-btn">Previous</button>
+                <button type="button" id="next-btn">Next</button>
+            </div>
+
+            <button type="button" id="submit-btn">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <script src="eng.js"></script>
+    <script>
+        const form = document.getElementById("quiz-form");
+        const prevButton = document.getElementById("prev-btn");
+        const nextButton = document.getElementById("next-btn");
+        const questions = document.querySelectorAll(".question");
+        let currentQuestionIndex = 0;
+
+        function showQuestion(index) {
+            questions.forEach((question, i) => {
+                question.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        function navigate(direction) {
+            currentQuestionIndex += direction;
+            if (currentQuestionIndex < 0) {
+                currentQuestionIndex = 0;
+            }
+            if (currentQuestionIndex >= questions.length) {
+                currentQuestionIndex = questions.length - 1;
+            }
+            showQuestion(currentQuestionIndex);
+        }
+
+        prevButton.addEventListener("click", () => navigate(-1));
+        nextButton.addEventListener("click", () => navigate(1));
+
+        showQuestion(currentQuestionIndex);
+    </script>
+
+
+</body>
+</html>

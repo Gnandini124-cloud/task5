@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+    body {
+        font-family: 'Poppins',sans-serif;
+         margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #05252296;
+        color: #FFF;
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    main {
+        padding: 2rem;
+    }
+    
+    h1 {
+       text-align: center;
+    }
+    #assessment a{
+        display: flex;
+        justify-content: center;
+    }
+    
+    .shop-section {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #e2e7e6;
+    }
+    h2{
+        text-align: center;
+    }
+    .box {
+        height: 500px;
+        width: 23%;
+        background-color: white;
+        padding: 20px 0px 15px;
+        margin-top: 15px;
+    }
+    .box-img {
+       height: 300px;
+       display: flex;
+      justify-content: center;
+      align-items: center;
+       background-size: cover;
+       margin-top: 1rem;
+       margin-bottom: 1rem;
+      
+    }
+    .box-content {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+    .box-content p {
+        color:#007185 ;
+    }
+    .footer{
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: 200px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    button{
+        display: flex;
+        justify-content: start;
+    }
+    
+    .w3-teal{
+       
+        text-decoration: none;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .w3-teal a{
+        text-decoration: none;
+    }
+    .w3-teal a:hover{
+      text-decoration-line: underline;
+      animation-duration: 0.4s;
+    }
+    .info{
+        display: flex;
+        align-items: center;
+        justify-content: end;
+       
+    }
+    .info ul li a{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .info ul li a:hover{
+        color:#009688!important ;
+        cursor: pointer;
+    }
+    li{
+        list-style-type: none;
+    }
+    .icons{
+        color: white;
+        justify-content: space-evenly;
+    }
+    
+  </style>
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+        <header>
+            <h1>Job Portal</h1>
+        </header>
+          
+        
+<nav class="">         
+        <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none" id="mySidebar">
+            <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+            <a href="#" class="w3-bar-item w3-button">About</a>
+            <a href="#" class="w3-bar-item w3-button">Companies</a>
+            <a href="#" class="w3-bar-item w3-button">Software engineer</a>
+            <a href="#" class="w3-bar-item w3-button">Web developer</a>
+            <a href="#" class="w3-bar-item w3-button">Product Managers</a>
+            <a href="#" class="w3-bar-item w3-button">Data Scientist</a>
+            <a href="#" class="w3-bar-item w3-button">Network adminstrator</a>
+            <a href="#" class="w3-bar-item w3-button">Business systems analyst</a>
+            <a href="#" class="w3-bar-item w3-button">UX and UI designers</a>
+            <a href="#" class="w3-bar-item w3-button">Network adminstrator</a>
+            <a href="#" class="w3-bar-item w3-button">Reference</a>
+          </div>
+          
+        
+          <div class="w3-teal">
+            <button class="w3-button w3-teal w3-xlarge"  onclick="w3_open()">☰</button>
+                <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                <a href="#">Internship</a>
+                <a href="#"><i class="fa-solid fa-briefcase"></i>Jobs</a>
+                <a href="#">Part-time</a>
+               <a href="Sign up.html">Sign Up</a>
+            
+                </div>   
+    </nav>
+        
+                
+        
+             <section id="assessment">
+                <a href="Candidate assesment.html">Skill Assessment</a>
+            </section>
+            <div class="shop-section">
+                <div class="box1 box">
+                <div class="box-content">
+                    <h2>Google</h2>
+                        <div class="box-img" style="background-image:url('google.jpg');"></div>
+                        <p>See more</p>
+                   </div>
+                </div>
+                <div class="box2 box">
+                    <div class="box-content">
+                        <h2>Salesforce</h2>
+                            <div class="box-img" style="background-image:url('salesforce.jpg');"></div>
+                            <p>See more</p>
+                       </div>
+                </div> 
+                <div class="box3 box">
+                    <div class="box-content">
+                        <h2>Microsoft</h2>
+                            <div class="box-img" style="background-image:url('microsoft.jpg');"></div>
+                            <p>See more</p>
+                       </div>
+                </div>
+                <div class="box4 box">
+                    <div class="box-content">
+                        <h2>Amazon</h2>
+                            <div class="box-img" style="background-image:url('amazon.jpg');"></div>
+                            <p>See more</p>
+                       </div>
+                </div>
+                <div class="box1 box">
+                    <div class="box-content">
+                        <h2>Facebook</h2>
+                            <div class="box-img" style="background-image:url('facebook.jpg');"></div>
+                            <p>See more</p>
+                       </div>
+                    </div>
+                    <div class="box2 box">
+                        <div class="box-content">
+                            <h2>Adobe</h2>
+                                <div class="box-img" style="background-image:url('adobe.jpg');"></div>
+                                <p>See more</p>
+                           </div>
+                    </div> 
+                    <div class="box3 box">
+                        <div class="box-content">
+                            <h2>Zillow</h2>
+                                <div class="box-img" style="background-image:url('zillow.jpg');"></div>
+                                <p>See more</p>
+                           </div>
+                    </div>
+                    <div class="box4 box">
+                        <div class="box-content">
+                            <h2>Nintendo</h2>
+                                <div class="box-img" style="background-image:url('nintendo.jpg');"></div>
+                                <p>See more</p>
+                           </div>
+                    </div>
+            </div>
+            <script>
+                function w3_open() {
+                  document.getElementById("mySidebar").style.display = "block";
+                }
+                
+                function w3_close() {
+                  document.getElementById("mySidebar").style.display = "none";
+                }
+                </script>
+           <footer class="footer">
+          
+                    <div class="icons">
+                        <i class="fa-brands fa-instagram fa-2x"></i>
+                        <i class="fa-brands fa-facebook fa-2x"></i>
+                        <i class="fa-brands fa-twitter fa-2x"></i>
+                        <i class="fa-brands fa-linkedin fa-2x"></i>
+                        <i class="fa-solid fa-envelope fa-2x"></i>
+                    </div>
+                    © Copyright 2023 Megahire.All Rights Reserved
+            <div class="info">
+              <ul> 
+                <li><a>Blog</a></li>
+                <li><a>Our Services</a></li>
+               <li><a>Terms and Conditions</a></li>
+               <li><a>Contact Us</a></li>
+               <li><a>Privacy</a></li>
+               <li><a>Sitemap</a></li>
+              </ul>
+            </div>
+            
+           </footer>
+       
+</body>
+</html>

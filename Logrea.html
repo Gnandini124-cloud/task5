@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Reasoning</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <h1>Logical Reasoning</h1>
+        <form id="quiz-form">
+            <div class="question">
+                <p>1) Which number should come next in the series, 48, 24, 12, ......?</p>
+                <label><input type="radio" name="q1" value="a">a) 8</label>
+                <label><input type="radio" name="q1" value="b">b) 6</label>
+                <label><input type="radio" name="q1" value="c">c) 4</label>
+                <label><input type="radio" name="q2" value="d">d) 2</label>
+                </div>
+                <div class="question">
+                <p>2. RQP, ONM, _, IHG, FED, find the missing letters.</p>
+                <label><input type="radio" name="q2" value="a"> a) CDE</label>
+                <label><input type="radio" name="q2" value="b"> b) LKI</label>
+                <label><input type="radio" name="q2" value="c"> c) LKJ</label>
+                <label><input type="radio" name="q2" value="d"> d) BAC</label>
+                </div>
+                <div class="question">
+                <p>3.PETAL: FLOWER</p>
+                <label><input type="radio" name="q3" value="a"> a) Pen: Paper</label>
+                <label><input type="radio" name="q3" value="b"> b) Engine: Car</label>
+                <label><input type="radio" name="q3" value="c"> c) Cat: Dog</label>
+                <label><input type="radio" name="q3" value="d"> d) Ball: Game</label>
+                </div>
+                <div class="question">
+                <p>4.I. All the colleges in the city had to keep closed for three days a week.
+                    II. Many students have left the local colleges.</p>
+                <label><input type="radio" name="q4" value="a">a) Statement II is the cause and statement I is its effect</label>
+                <label><input type="radio" name="q4" value="b">b) Statement I is the cause and statement II is its effect</label>
+                <label><input type="radio" name="q4" value="c">c) Both the statements are effects of independent causes
+                </label>
+                <label><input type="radio" name="q4" value="d">d) Both the statements are independent causes</label>
+            </div>
+            <div class="question">
+                <p>5. Which word does not belong to others?</p>
+                <label><input type="radio" name="q5" value="a"> a) Inch</label>
+                <label><input type="radio" name="q5" value="b">b) Kilogram</label>
+                <label><input type="radio" name="q5" value="c">c) Centimeter</label>
+                <label><input type="radio" name="q5" value="d"> d) Yard</label>
+               
+            </div>
+            <div class="question">
+                <p>6.Pointing to a photograph, a man said, "I have no brother, and that man's father is my father's son." Whose photograph was it?</p>
+                <label><input type="radio" name="q6" value="a"> a) His son</label>
+                <label><input type="radio" name="q6" value="b">b) His own</label>
+                <label><input type="radio" name="q6" value="c">c) His father</label>
+                <label><input type="radio" name="q6" value="d"> d) His nephew</label>
+               
+            </div>
+            <div class="question">
+                <p>7. Arrange the following words in a meaningful sequence.
+                    1. Infection
+                    2. Consultation
+                    3. Doctor
+                    4. Treatment
+                    5. Recovery
+                </p>
+                <label><input type="radio" name="q6" value="a"> a) 1, 3, 4, 5, 2</label>
+                <label><input type="radio" name="q6" value="b">b) 1, 3, 2, 4, 5</label>
+                <label><input type="radio" name="q6" value="c">c)  1, 2, 3, 4, 5</label>
+                <label><input type="radio" name="q6" value="d"> d) 2, 3, 5, 1, 4</label>
+               
+            </div>
+            <div class="question">
+                <p>8.Peter is in the East of Tom and Tom is in the North of John. Mike is in the South of John then in which direction of Peter is Mike?</p>
+                <label><input type="radio" name="q6" value="a"> a)South-East</label>
+                <label><input type="radio" name="q6" value="b">b) South-West</label>
+                <label><input type="radio" name="q6" value="c">c) South</label>
+                <label><input type="radio" name="q6" value="d"> d)North-East</label>
+               
+            </div>
+            <div class="question">
+                <p>9.An animal always has</p>
+                <label><input type="radio" name="q6" value="a"> a) Skin</label>
+                <label><input type="radio" name="q6" value="b">b) Heart</label>
+                <label><input type="radio" name="q6" value="c">c) Lungs</label>
+                <label><input type="radio" name="q6" value="d"> d) life</label>
+               
+            </div>
+            <div class="question">
+                <p>What is Geeta's rank in the class?
+
+                    I. There are 30 students in the class.
+                    II. There are 10 students who scored less than Geeta.</p>
+                <label><input type="radio" name="q6" value="a"> a) Statement I alone is sufficient, but statement II alone is not sufficient</label>
+                <label><input type="radio" name="q6" value="b">b) Statement II alone is sufficient, but statement I alone is not sufficient</label>
+                <label><input type="radio" name="q6" value="c">c) Either I or II is sufficient</label>
+                <label><input type="radio" name="q6" value="d"> d) Both I and II are needed</label>
+               
+            </div>
+          
+               
+            <div class="navigation">
+                <button type="button" id="prev-btn">Previous</button>
+                <button type="button" id="next-btn">Next</button>
+            </div>
+
+            <button type="button" id="submit-btn">Submit</button>
+        </form>
+        <div id="result"></div>
+    </div>
+    
+    <script src="logic.js"></script>
+    <script>
+        const form = document.getElementById("quiz-form");
+        const prevButton = document.getElementById("prev-btn");
+        const nextButton = document.getElementById("next-btn");
+        const questions = document.querySelectorAll(".question");
+        let currentQuestionIndex = 0;
+
+        function showQuestion(index) {
+            questions.forEach((question, i) => {
+                question.style.display = i === index ? "block" : "none";
+            });
+        }
+
+        function navigate(direction) {
+            currentQuestionIndex += direction;
+            if (currentQuestionIndex < 0) {
+                currentQuestionIndex = 0;
+            }
+            if (currentQuestionIndex >= questions.length) {
+                currentQuestionIndex = questions.length - 1;
+            }
+            showQuestion(currentQuestionIndex);
+        }
+
+        prevButton.addEventListener("click", () => navigate(-1));
+        nextButton.addEventListener("click", () => navigate(1));
+
+        showQuestion(currentQuestionIndex);
+    </script>
+
+
+</body>
+</html>
